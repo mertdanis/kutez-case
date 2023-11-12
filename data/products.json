@@ -1,0 +1,124 @@
+[
+  {
+    "ring": [
+      {
+        "name": "Engagement Ring 1",
+        "price": "101.00",
+        "img": "./my-project/src/assets/imgs/"
+      },
+      {
+        "name": "Engagement Ring 2",
+        "price": "102.00",
+        "img": "./my-project/src/assets/imgs/"
+      },
+      {
+        "name": "Engagement Ring 3",
+        "price": "103.00",
+        "img": "./my-project/src/assets/imgs/"
+      },
+      {
+        "name": "Engagement Ring 4",
+        "price": "104.00",
+        "img": "./my-project/src/assets/imgs/"
+      },
+      {
+        "name": "Engagement Ring 5",
+        "price": "105.00",
+        "img": "./my-project/src/assets/imgs/"
+      },
+
+      {
+        "name": "Engagement Ring 6",
+        "price": "106.00",
+        "img": "./my-project/src/assets/imgs/"
+      },
+
+      {
+        "name": "Engagement Ring 7",
+        "price": "107.00",
+        "img": "./my-project/src/assets/imgs/"
+      },
+
+      {
+        "name": "Engagement Ring 8",
+        "price": "108.00",
+        "img": "./my-project/src/assets/imgs/"
+      }
+    ],
+    "pendatans": [
+      {
+        "name": "Pendants 1",
+        "price": "109.00",
+        "img": "./my-project/src/assets/imgs/Rectangle 1-2.jpg"
+      },
+
+      {
+        "name": "Pendants 2",
+        "price": "110.00",
+        "img": "./my-project/src/assets/imgs/Rectangle 2-2.jpg"
+      },
+
+      {
+        "name": "Pendants 3",
+        "price": "111.00",
+        "img": "./my-project/src/assets/imgs/Rectangle 3-2.jpg"
+      },
+
+      {
+        "name": "Pendants 4",
+        "price": "112.00",
+        "img": "./my-project/src/assets/imgs/Rectangle 4-2.jpg"
+      },
+
+      {
+        "name": "Pendants 5",
+        "price": "113.00",
+        "img": "./my-project/src/assets/imgs/Rectangle 5.jpg"
+      },
+
+      {
+        "name": "Pendants 6",
+        "price": "114.00",
+        "img": "./my-project/src/assets/imgs/Rectangle 6.jpg"
+      },
+
+      {
+        "name": "Pendants 7",
+        "price": "115.00",
+        "img": "./my-project/src/assets/imgs/Rectangle 7.jpg"
+      },
+
+      {
+        "name": "Pendants 8",
+        "price": "116.00",
+        "img": "./my-project/src/assets/imgs/Rectangle 8.jpg"
+      }
+    ],
+
+    "bridal": [
+      {
+        "name": "Bridal Set",
+        "price": "117.00",
+        "img": "./my-project/src/assets/imgs/Rectangle 9.jpg"
+      },
+
+      {
+        "name": "Bridal Set",
+        "price": "118.00",
+        "img": "./my-project/src/assets/imgs/Rectangle 10.jpg"
+      },
+
+      {
+        "name": "Bridal Set",
+        "price": "119.00",
+        "img": "./my-project/src/assets/imgs/Rectangle 11.jpg"
+      },
+
+      {
+        "name": "Bridal Set",
+        "price": "120.00",
+        "img": "./my-project/src/assets/imgs/Rectangle 12.jpg"
+      }
+    ]
+  }
+]
