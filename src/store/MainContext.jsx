@@ -6,6 +6,8 @@ const MainProvider = createContext();
 const initialState = {
   content: [],
   cart: [],
+
+  isCartOpen: false,
 };
 
 function MainContext({ children }) {
@@ -16,10 +18,32 @@ function MainContext({ children }) {
           ...state,
           content: action.payload,
         };
+
+      case "cart/add":
+        return {
+          ...state,
+          cart: [...state.cart, action.payload],
+        };
+
+      case "cart/del":
+        console.log(action.payload);
+        return {
+          ...state,
+          cart: action.payload,
+        };
+
+      case "cart/status":
+        return {
+          ...state,
+          isCartOpen: action.payload,
+        };
     }
   };
 
-  const [{ content, cart }, dispatch] = useReducer(reducer, initialState);
+  const [{ content, cart, isCartOpen }, dispatch] = useReducer(
+    reducer,
+    initialState
+  );
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,6 +62,7 @@ function MainContext({ children }) {
       value={{
         content,
         cart,
+        isCartOpen,
         dispatch,
       }}
     >
