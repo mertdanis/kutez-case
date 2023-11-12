@@ -1,20 +1,19 @@
-import axios from "axios";
-
-import { useEffect, useState } from "react";
+import { useData } from "../store/MainContext";
 
 function Content() {
-  const [data, setData] = useState(null);
+  const { content } = useData();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await axios.get("/my-project/data/products.json");
-      console.log(res);
-    };
+  return content.map((data) => {
+    const { name, price, img } = data;
 
-    fetchData();
-  }, []);
-
-  return <div></div>;
+    return (
+      <div key={img} className="flex flex-col my-[30px]  gap-3">
+        <img className="rounded-2xl" src={img} alt={name} />
+        <p>{name}</p>
+        <p>${price} USD</p>
+      </div>
+    );
+  });
 }
 
 export default Content;

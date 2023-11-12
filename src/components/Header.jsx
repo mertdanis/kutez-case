@@ -1,12 +1,10 @@
-import React from "react";
-
 function Header() {
   return (
-    <div className="flex justify-between p-3 bg-black text-white">
-      <h1 className="uppercase font-bold">my jewelry store</h1>
-      <div className="flex gap-6">
-        <img src="/my-project/public/Group 3.jpg" alt="search-icon" />
-        <img src="/my-project/src/assets/imgs/Group 2.jpg" alt="shop-icon" />
+    <div className="flex justify-between p-3 items-center ">
+      <h1 className="uppercase  text-2xl">my jewelry store</h1>
+      <div className="flex  gap-6">
+        <img src="/public/imgs/Group 3.jpg" alt="search-icon" />
+        <img src="/public/Group 2.jpg" alt="shop-icon" />
       </div>
     </div>
   );
