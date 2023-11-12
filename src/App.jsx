@@ -3,6 +3,8 @@ import Footer from "./components/Footer";
 import Content from "./components/Content";
 import Input from "./components/Input";
 
+import { useData } from "./store/MainContext";
+
 function App() {
   return (
     <div className="px-[20vw] py-[5vh]">

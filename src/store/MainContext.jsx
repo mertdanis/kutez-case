@@ -6,7 +6,7 @@ const MainProvider = createContext();
 const initialState = {
   content: [],
   cart: [],
-
+  filter: "",
   isCartOpen: false,
 };
 
@@ -19,6 +19,12 @@ function MainContext({ children }) {
           content: action.payload,
         };
 
+      case "content/filter":
+        return {
+          ...state,
+          filter: action.payload,
+        };
+
       case "cart/add":
         return {
           ...state,
@@ -27,9 +33,8 @@ function MainContext({ children }) {
 
       case "cart/del":
         const product = action.payload;
-
-        const delProduct = state.cart.filter((a) => {
-          if (a !== product) {
+        const delProduct = state.cart.filter((a, index) => {
+          if (index !== product) {
             return a;
           }
         });
@@ -47,7 +52,7 @@ function MainContext({ children }) {
     }
   };
 
-  const [{ content, cart, isCartOpen }, dispatch] = useReducer(
+  const [{ content, cart, isCartOpen, filter }, dispatch] = useReducer(
     reducer,
     initialState
   );
@@ -70,6 +75,7 @@ function MainContext({ children }) {
         content,
         cart,
         isCartOpen,
+        filter,
         dispatch,
       }}
     >

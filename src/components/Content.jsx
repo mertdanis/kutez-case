@@ -2,37 +2,41 @@ import { useState } from "react";
 import { useData } from "../store/MainContext";
 
 function Content() {
-  const { content, dispatch } = useData();
-  const [showCart, setshowCart] = useState(false);
+  const { content, dispatch, filter } = useData();
 
-  console.log(showCart);
+  const [show, setShow] = useState(false);
 
-  return content.map((data) => {
-    const { name, price, img } = data;
+  return content
+    .filter((item) => {
+      return filter.toLocaleLowerCase() === ""
+        ? item
+        : item.name.toLocaleLowerCase().includes(filter);
+    })
+    .map((data, i) => {
+      const { name, price, img } = data;
 
-    return (
-      <div key={img} className="flex flex-col my-[30px] gap-1 ">
-        <img
-          className=" rounded-2xl transition duration-500 hover:scale-105 hover:-translate-y-4  cursor-pointer"
-          src={img}
-          alt={name}
-          onMouseEnter={() => setshowCart(true)}
-          onMouseLeave={() => setshowCart(false)}
-          onClick={() => {
-            dispatch({
-              type: "cart/add",
-              payload: data,
-            });
-          }}
-        />
+      return (
+        <div key={img} className="flex flex-col my-[30px] gap-1 ">
+          <img
+            className=" rounded-2xl transition duration-500 hover:scale-105 hover:-translate-y-4  cursor-pointer"
+            src={img}
+            alt={name}
+            onClick={() => {
+              dispatch({
+                type: "cart/add",
+                payload: data,
+              });
+            }}
+          />
+          <p className={` ${show ? "block" : "hidden"}`}>Add to Cart</p>
 
-        <p>test</p>
-
-        <p>{name}</p>
-        <p>${price} USD</p>
-      </div>
-    );
-  });
+          <p>{name}</p>
+          <p className="hover:cursor-pointer" onClick={() => setShow(!show)}>
+            ${price} USD
+          </p>
+        </div>
+      );
+    });
 }
 
 export default Content;

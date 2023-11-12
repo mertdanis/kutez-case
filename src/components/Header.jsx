@@ -9,9 +9,9 @@ function Header() {
   const [showSearch, setshowSearch] = useState(false);
 
   return (
-    <div className="flex justify-between py-3 items-center border-b-2">
+    <div className="flex justify-between py-3  border-b-2">
       <h1 className="uppercase  text-2xl">my jewelry store</h1>
-      <div className="flex relative gap-6">
+      <div className="flex relative gap-6  items-center ">
         <div className="relative">
           <img
             onClick={() => {
@@ -22,8 +22,15 @@ function Header() {
             alt="search-icon"
           />
           {showSearch && (
-            <div className="absolute right-8 -bottom-2">
-              <Input />
+            <div className="absolute right-52 -bottom-2">
+              <Input
+                onChange={(e) => {
+                  dispatch({
+                    type: "content/filter",
+                    payload: e.target.value,
+                  });
+                }}
+              />
             </div>
           )}
         </div>
@@ -48,9 +55,11 @@ function Header() {
           )}
         </div>
 
-        <div className="absolute top-10  z-10 right-0 border-2 border-slate-500">
-          {isCartOpen && <Cart />}
-        </div>
+        {isCartOpen && (
+          <div className="absolute top-10 z-10 right-0 border-2 border-slate-500">
+            <Cart />
+          </div>
+        )}
       </div>
     </div>
   );
