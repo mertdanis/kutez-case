@@ -26,10 +26,17 @@ function MainContext({ children }) {
         };
 
       case "cart/del":
-        console.log(action.payload);
+        const product = action.payload;
+
+        const delProduct = state.cart.filter((a) => {
+          if (a !== product) {
+            return a;
+          }
+        });
+
         return {
           ...state,
-          cart: action.payload,
+          cart: delProduct,
         };
 
       case "cart/status":

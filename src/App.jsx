@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Content from "./components/Content";
-import Cart from "./components/Cart";
+import Input from "./components/Input";
 
 function App() {
   return (
