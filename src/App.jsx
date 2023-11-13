@@ -1,9 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Content from "./components/Content";
-import Input from "./components/Input";
-
-import { useData } from "./store/MainContext";
 
 function App() {
   return (

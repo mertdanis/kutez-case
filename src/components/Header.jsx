@@ -11,7 +11,7 @@ function Header() {
   return (
     <div className="flex justify-between py-3  ">
       <h1 className="uppercase font-fontTitle text-2xl">my jewelry store</h1>
-      <div className="flex relative gap-6  items-center ">
+      <div className="flex  gap-4  relative   items-center ">
         <div className="relative">
           <img
             onClick={() => {
@@ -20,12 +20,12 @@ function Header() {
               });
               setshowSearch(!showSearch);
             }}
-            className="cursor-pointer"
+            className="cursor-pointer mt-1 "
             src="/public/imgs/Group 3.jpg"
             alt="search-icon"
           />
           {showSearch && (
-            <div className="absolute right-52 -bottom-2">
+            <div className="absolute right-48 -bottom-3">
               <Input
                 onChange={(e) => {
                   dispatch({
