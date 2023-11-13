@@ -9,9 +9,9 @@ function Header() {
   const [showSearch, setshowSearch] = useState(false);
 
   return (
-    <div className="flex justify-between py-3  ">
-      <h1 className="uppercase font-fontTitle text-2xl">my jewelry store</h1>
-      <div className="flex  gap-4  relative   items-center ">
+    <div className="flex flex-col 2xl:flex-row items-center xl:gap-0 gap-3 xl:justify-between justify-center py-3  ">
+      <h1 className="uppercase font-fontTitle text-2xl  ">my jewelry store</h1>
+      <div className="flex  gap-4  relative sm:py-0 pb-6  items-center ">
         <div className="relative">
           <img
             onClick={() => {
@@ -25,7 +25,7 @@ function Header() {
             alt="search-icon"
           />
           {showSearch && (
-            <div className="absolute right-48 -bottom-3">
+            <div className="absolute xl:right-48 xl:-bottom-3  -right-16 -bottom-14 ">
               <Input
                 onChange={(e) => {
                   dispatch({
@@ -59,7 +59,7 @@ function Header() {
         </div>
 
         {isCartOpen && (
-          <div className="absolute top-10 z-10 right-0 border-2 border-black">
+          <div className="absolute top-10 z-10 sm:right-0 -right-20 border-2 border-black">
             <Cart />
           </div>
         )}

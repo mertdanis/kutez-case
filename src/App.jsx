@@ -7,7 +7,7 @@ function App() {
     <div className="px-[20vw] py-6">
       <Header />
 
-      <div className="grid grid-cols-4 gap-x-4 ">
+      <div className="grid lg:grid-cols-4 grid-cols-2 gap-x-4 ">
         <Content />
       </div>
 

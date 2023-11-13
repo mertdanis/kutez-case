@@ -33,15 +33,8 @@ function Content() {
             }}
           />
 
-          {show ? <i className="fa-solid fa-cart-shopping"></i> : ""}
-
           <p className="text-font15">{name}</p>
-          <p
-            className="hover:cursor-pointer text-font17"
-            onClick={() => setShow(!show)}
-          >
-            ${price} USD
-          </p>
+          <p className="hover:cursor-pointer text-font17">${price} USD</p>
         </div>
       );
     });
