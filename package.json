@@ -1,5 +1,5 @@
 {
-  "homepage": "https://mertdanis.github.io",
+  "homepage": "https://mertdanis.github.io/kutez-case",
   "name": "my-project",
   "private": true,
   "version": "0.0.0",
@@ -13,7 +13,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@bundled-es-modules/axios": "^0.27.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
