@@ -11,7 +11,7 @@ function Header() {
   return (
     <div className="flex flex-col 2xl:flex-row items-center xl:gap-0 gap-3 xl:justify-between justify-center py-3  ">
       <h1 className="uppercase font-fontTitle text-2xl  ">my jewelry store</h1>
-      <div className="flex  gap-4  relative sm:py-0 pb-6  items-center ">
+      <div className="flex  gap-4  relative sm:pb-0 2xl:pb-0 lg:pb-6 pb-6 items-center ">
         <div className="relative">
           <img
             onClick={() => {
@@ -25,7 +25,7 @@ function Header() {
             alt="search-icon"
           />
           {showSearch && (
-            <div className="absolute xl:right-48 xl:-bottom-3  -right-16 -bottom-14 ">
+            <div className="absolute -right-16 -bottom-14  lg:-right-56   2xl:right-48 2xl:-bottom-3 ">
               <Input
                 onChange={(e) => {
                   dispatch({
