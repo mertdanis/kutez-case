@@ -70,7 +70,7 @@ function MainContext({ children }) {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("/public/data/products.json")
+      const res = await fetch("/kutez-case/public/data/products.json")
         .then((res) => res.json())
         .then((data) =>
           dispatch({
