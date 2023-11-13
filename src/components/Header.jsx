@@ -9,7 +9,7 @@ function Header() {
   const [showSearch, setshowSearch] = useState(false);
 
   return (
-    <div className="flex bg-black flex-col 2xl:flex-row items-center xl:gap-0 gap-3 xl:justify-between justify-center py-3  ">
+    <div className="flex  flex-col 2xl:flex-row items-center xl:gap-0 gap-3 xl:justify-between justify-center py-3  ">
       <h1 className="uppercase font-fontTitle text-2xl  ">my jewelry store</h1>
       <div className="flex  gap-4  relative sm:pb-0 2xl:pb-0 lg:pb-6 pb-6 items-center ">
         <div className="relative">
@@ -21,7 +21,7 @@ function Header() {
               setshowSearch(!showSearch);
             }}
             className="cursor-pointer mt-1 "
-            src="./kutez-case/public/imgs/Group 3.jpg"
+            src="./imgs/Group 3.jpg"
             alt="search-icon"
           />
           {showSearch && (
@@ -46,7 +46,7 @@ function Header() {
                 payload: !isCartOpen,
               });
             }}
-            src="./kutez-case/public/imgs/Group 2.jpg"
+            src="./imgs/Group 2.jpg"
             alt="shop-icon"
           />
           {cart.length > 0 ? (

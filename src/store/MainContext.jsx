@@ -1,5 +1,7 @@
 import { createContext, useContext, useReducer, useEffect } from "react";
 
+import axios from "axios";
+
 const MainProvider = createContext();
 
 const initialState = {
@@ -70,14 +72,12 @@ function MainContext({ children }) {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("/kutez-case/public/data/products.json")
-        .then((res) => res.json())
-        .then((data) =>
-          dispatch({
-            type: "content",
-            payload: data,
-          })
-        );
+      const res = await axios.get("./data/products.json");
+
+      dispatch({
+        type: "content",
+        payload: res.data,
+      });
     };
 
     fetchData();
