@@ -21,7 +21,7 @@ function Header() {
               setshowSearch(!showSearch);
             }}
             className="cursor-pointer mt-1 "
-            src="./public/imgs/Group 3.jpg"
+            src="./kutez-case/public/imgs/Group 3.jpg"
             alt="search-icon"
           />
           {showSearch && (
@@ -46,7 +46,7 @@ function Header() {
                 payload: !isCartOpen,
               });
             }}
-            src="./public/imgs/Group 2.jpg"
+            src="./kutez-case/public/imgs/Group 2.jpg"
             alt="shop-icon"
           />
           {cart.length > 0 ? (
