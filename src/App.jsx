@@ -7,7 +7,7 @@ import { useData } from "./store/MainContext";
 
 function App() {
   return (
-    <div className="px-[20vw] py-[5vh]">
+    <div className="px-[20vw] py-6">
       <Header />
 
       <div className="grid grid-cols-4 gap-x-4 ">

@@ -9,12 +9,15 @@ function Header() {
   const [showSearch, setshowSearch] = useState(false);
 
   return (
-    <div className="flex justify-between py-3  border-b-2">
-      <h1 className="uppercase  text-2xl">my jewelry store</h1>
+    <div className="flex justify-between py-3  ">
+      <h1 className="uppercase font-fontTitle text-2xl">my jewelry store</h1>
       <div className="flex relative gap-6  items-center ">
         <div className="relative">
           <img
             onClick={() => {
+              dispatch({
+                type: "content/filter/clear",
+              });
               setshowSearch(!showSearch);
             }}
             className="cursor-pointer"
@@ -56,7 +59,7 @@ function Header() {
         </div>
 
         {isCartOpen && (
-          <div className="absolute top-10 z-10 right-0 border-2 border-slate-500">
+          <div className="absolute top-10 z-10 right-0 border-2 border-black">
             <Cart />
           </div>
         )}

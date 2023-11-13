@@ -25,10 +25,22 @@ function MainContext({ children }) {
           filter: action.payload,
         };
 
+      case "content/filter/clear":
+        return {
+          ...state,
+          filter: "",
+        };
+
       case "cart/add":
         return {
           ...state,
           cart: [...state.cart, action.payload],
+        };
+
+      case "cart/clear/all":
+        return {
+          ...state,
+          cart: [],
         };
 
       case "cart/del":

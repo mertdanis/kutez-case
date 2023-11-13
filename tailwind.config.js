@@ -8,6 +8,11 @@ export default {
         font17: "17px",
         font20: "20px",
       },
+
+      fontFamily: {
+        fontTitle: "Kanit",
+        fontBody: "'Montserrat'",
+      },
     },
   },
   plugins: [],

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useData } from "../store/MainContext";
 
+import Button from "./Button";
+
 function Cart() {
   const [total, setTotal] = useState();
 
@@ -11,10 +13,10 @@ function Cart() {
   }, 0);
 
   return (
-    <div className="flex flex-col gap-3 text-2xl w-[20vw] bg-gray-100 rounded-2xl h-fit p-3 ">
+    <div className="flex flex-col gap-3 text-2xl w-[20vw] bg-gray-100  h-fit p-3 ">
       <div className="text-center border-b-2 border-black p-2">
         {cart.length > 0 ? (
-          <p className="">My Cart ({cart.length}) product</p>
+          <p className="font-fontTitle">My Cart ({cart.length}) products</p>
         ) : (
           <p>Your Cart is Empty!</p>
         )}
@@ -41,6 +43,22 @@ function Cart() {
           </div>
         );
       })}
+      <div className="flex justify-between py-3">
+        <Button> Clear All</Button>
+
+        {/* <button
+          onClick={() => {
+            dispatch({
+              type: "cart/clear/all",
+            });
+          }}
+        >
+          Clear All
+        </button> */}
+        <button className="bg-orange-500 rounded-2xl text-white p-3">
+          Checkout
+        </button>
+      </div>
       <p className="text-center">Total Price is: ${totalBalance} USD</p>
     </div>
   );
